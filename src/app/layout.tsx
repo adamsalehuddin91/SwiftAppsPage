@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
-    title: "SwiftApps | Infrastruktur Perisian Gred Junior",
+    title: "SwiftApps | Infrastruktur Perisian Moden",
     description: "Membina sistem yang scalable, modular, dan SaaS-ready menggunakan tech stack moden. Kami bina arsitektur yang solid.",
     keywords: ["Software Architect", "Full-Stack Developer", "Next.js", "Laravel", "Malaysia", "SaaS", "Software Development"],
     authors: [{ name: "Sahdan", url: "https://swiftapps.my" }],
