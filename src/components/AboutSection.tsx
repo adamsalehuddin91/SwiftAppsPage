@@ -68,16 +68,16 @@ export function AboutSection() {
                         </div>
 
                         <h2 className="text-4xl md:text-5xl font-outfit font-bold text-white">
-                            Mengenai Saya
+                            About Me
                         </h2>
 
                         <div className="space-y-6 text-slate-300 text-lg leading-relaxed font-light">
                             <p>
-                                Saya seorang <strong className="text-white font-medium">Full-Stack Developer</strong> & <strong className="text-white font-medium">Software Architect</strong>. Fokus saya adalah membina sistem yang berorientasikan hasil tanpa mukadimah panjang yang membosankan.
+                                I am a <strong className="text-white font-medium">Full-Stack Developer</strong> & <strong className="text-white font-medium">Software Architect</strong>. My focus is on building result-oriented systems without unnecessary long preambles.
                             </p>
 
                             <p>
-                                Sebagai seorang <strong>Architect</strong>, saya bukan sekadar &apos;coder&apos;. Saya mementingkan <em>scalability</em>, kebersihan kod (<span className="text-primary">clean code</span>), dan <em>long-term maintenance</em> untuk memastikan empayar software anda sedia untuk masa depan.
+                                As an <strong>Architect</strong>, I am not just a &apos;coder&apos;. I prioritize <em>scalability</em>, <span className="text-primary">clean code</span>, and <em>long-term maintenance</em> to ensure your software empire is ready for the future.
                             </p>
                         </div>
 

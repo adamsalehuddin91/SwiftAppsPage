@@ -24,10 +24,10 @@ export function Navbar() {
                 </Link>
 
                 <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-                    <Link href="#about" className="hover:text-primary transition-colors">Mengenai Saya</Link>
-                    <Link href="#portfolio" className="hover:text-primary transition-colors">Ekosistem</Link>
+                    <Link href="#about" className="hover:text-primary transition-colors">About Me</Link>
+                    <Link href="#portfolio" className="hover:text-primary transition-colors">Ecosystem</Link>
                     <Link href="#tech-stack" className="hover:text-primary transition-colors">Tech Stack</Link>
-                    <Link href="#contact" className="hover:text-primary transition-colors">Hubungi</Link>
+                    <Link href="#contact" className="hover:text-primary transition-colors">Contact</Link>
                 </nav>
 
                 {/* Mobile menu could go here, omitting for brevity of the main flow for now */}

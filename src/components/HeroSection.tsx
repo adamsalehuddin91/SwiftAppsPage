@@ -20,11 +20,11 @@ export function HeroSection() {
                     >
                         <h1 className="font-outfit text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white drop-shadow-md">
                             <span className="block mb-2 text-primary text-glow">SwiftApps:</span>
-                            Infrastruktur <br className="hidden md:block" /> Perisian Moden.
+                            Modern Software <br className="hidden md:block" /> Infrastructure.
                         </h1>
 
                         <p className="text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed font-light">
-                            Membina sistem yang scalable, modular, dan SaaS-ready menggunakan tech stack moden. Kami tak buat kod &quot;asal jalan&quot;, kami bina arsitektur yang solid.
+                            Building scalable, modular, and SaaS-ready systems using modern tech stacks. We don&apos;t write &quot;just make it work&quot; code, we build robust architectures.
                         </p>
 
                         <div className="pt-4 flex flex-wrap gap-4">
@@ -35,7 +35,7 @@ export function HeroSection() {
                                 {/* Button active shiny effect */}
                                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
                                 <span className="relative z-10 flex items-center gap-2">
-                                    Bincang Projek <span className="opacity-80 text-sm font-normal">(Direct-to-Developer)</span>
+                                    Discuss Project <span className="opacity-80 text-sm font-normal">(Direct-to-Developer)</span>
                                 </span>
                             </Link>
                         </div>

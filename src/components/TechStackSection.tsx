@@ -47,7 +47,7 @@ export function TechStackSection() {
                             Solid Software Architecture
                         </h2>
                         <p className="text-slate-300 text-lg leading-relaxed mb-10 font-light">
-                            Sistem anda tidak sekadar berfungsi, ia dibina dengan standard industri paling terkini. Dicipta untuk <span className="text-primary font-medium">zero technical debt</span>.
+                            Your system doesn&apos;t just work; it is built with the latest industry standards. Designed for <span className="text-primary font-medium">zero technical debt</span>.
                         </p>
 
                         <div className="space-y-8">

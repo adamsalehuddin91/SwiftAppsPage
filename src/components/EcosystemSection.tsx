@@ -7,7 +7,7 @@ const projects = [
     {
         title: "LorryTech OS",
         type: "Fleet Management",
-        description: "Centralized dashboard untuk pemilik lori SME. Menguruskan revenue (Lalamove + side jobs), digital receipt vault (LHDN 7-year compliance), komisyen, dan analitik P&L.",
+        description: "Centralized dashboard for SME lorry owners. Manages revenue (Lalamove + side jobs), digital receipt vault (LHDN 7-year compliance), commissions, and P&L analytics.",
         stack: ["Laravel 12", "Inertia.js", "React 18", "PostgreSQL"],
         icon: Truck,
         color: "text-blue-400",
@@ -16,7 +16,7 @@ const projects = [
     {
         title: "HMS Salon",
         type: "Full-Stack Management System",
-        description: "Sistem pengurusan salon berbayar. Merangkumi POS, temu janji, pengurusan inventori, dan portal tempahan awam.",
+        description: "Paid salon management system. Includes POS, appointments, inventory management, and a public booking portal.",
         stack: ["Next.js 16", "React 19", "Supabase"],
         icon: Scissors,
         color: "text-pink-400",
@@ -25,7 +25,7 @@ const projects = [
     {
         title: "TerasEdu",
         type: "Digital Kindergarten",
-        description: "Solusi pengurusan tadika digital untuk automasi operasi harian guru dan pentadbir.",
+        description: "Digital kindergarten management solution to automate daily operations for teachers and administrators.",
         stack: ["Laravel", "React", "PostgreSQL"],
         icon: BookOpen,
         color: "text-amber-400",
@@ -34,7 +34,7 @@ const projects = [
     {
         title: "BusinessSystem",
         type: "Contractor Management",
-        description: "Sistem pengurusan kontraktor/pembinaan merangkumi Invoicing, PO, Inventory, dan Finance syarikat.",
+        description: "Contractor/construction management system including Invoicing, PO, Inventory, and company Finance.",
         stack: ["Laravel 12", "Inertia.js", "React 18", "Supabase"],
         icon: Building2,
         color: "text-emerald-400",
@@ -43,7 +43,7 @@ const projects = [
     {
         title: "Stock Monitor Bursa",
         type: "PWA Dashboard",
-        description: "Dashboard pemantauan saham Bursa Malaysia dengan sokongan PWA (Offline-first) dan visualisasi data real-time.",
+        description: "Bursa Malaysia stock monitoring dashboard with PWA support (Offline-first) and real-time data visualization.",
         stack: ["React 19", "Vite 6", "TailwindCSS", "Chart.js"],
         icon: TrendingUp,
         color: "text-indigo-400",
@@ -63,7 +63,7 @@ export function EcosystemSection() {
                         viewport={{ once: true }}
                         className="text-3xl md:text-5xl font-outfit font-bold text-white mb-4"
                     >
-                        Ekosistem SwiftApps
+                        SwiftApps Ecosystem
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ export function EcosystemSection() {
                         transition={{ delay: 0.1 }}
                         className="text-slate-400 text-lg max-w-2xl mx-auto"
                     >
-                        Sistem kritikal yang dibangunkan dan diuruskan dengan standard produksi tinggi. Active Portfolio.
+                        Critical systems developed and managed with high production standards. Active Portfolio.
                     </motion.p>
                 </div>
 
