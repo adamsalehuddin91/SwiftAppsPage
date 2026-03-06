@@ -27,7 +27,7 @@ export function AboutSection() {
                                 <div className="absolute inset-0 z-0">
                                     <Image
                                         src="/profile.jpg"
-                                        alt="Sahdan - Junior Full-Stack Developer"
+                                        alt="Sahdan - Senior Full-Stack Developer & Software Architect"
                                         fill
                                         className="object-cover object-top opacity-80 group-hover:opacity-100 transition-opacity duration-500"
                                         sizes="(max-width: 768px) 100vw, 320px"
@@ -43,7 +43,7 @@ export function AboutSection() {
 
                                 <div className="relative z-20">
                                     <h3 className="text-2xl font-outfit font-bold text-white mb-1">Sahdan</h3>
-                                    <p className="text-primary text-sm font-medium tracking-wide">Junior Full-Stack Developer</p>
+                                    <p className="text-primary text-sm font-medium tracking-wide">Senior Full-Stack Developer & Architect</p>
 
                                     <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
                                         <span>Experience: 2+ Years</span>
@@ -73,7 +73,7 @@ export function AboutSection() {
 
                         <div className="space-y-6 text-slate-300 text-lg leading-relaxed font-light">
                             <p>
-                                Saya seorang <strong className="text-white font-medium">Junior Full-Stack Developer</strong>. Fokus saya adalah membina sistem yang berorientasikan hasil tanpa mukadimah panjang yang membosankan.
+                                Saya seorang <strong className="text-white font-medium">Senior Full-Stack Developer</strong> & <strong className="text-white font-medium">Software Architect</strong>. Fokus saya adalah membina sistem yang berorientasikan hasil tanpa mukadimah panjang yang membosankan.
                             </p>
 
                             <p>

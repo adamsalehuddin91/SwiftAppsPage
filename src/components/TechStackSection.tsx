@@ -81,60 +81,106 @@ export function TechStackSection() {
                         className="relative h-[500px] w-full flex items-center justify-center"
                     >
                         {/* Center Glow */}
-                        <div className="absolute inset-0 bg-primary/5 blur-[100px] rounded-full"></div>
+                        <div className="absolute inset-0 bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
 
                         {/* Diagram Container */}
-                        <div className="relative w-full max-w-md aspect-square glass border-white/10 rounded-full flex items-center justify-center animate-[spin_40s_linear_infinite]">
-                            {/* Inner Ring */}
-                            <div className="absolute inset-12 border border-white/5 rounded-full border-dashed animate-[spin_30s_linear_reverse_infinite]"></div>
+                        <div className="relative w-full max-w-sm lg:max-w-md aspect-square flex items-center justify-center">
+
+                            {/* Outer dashed ring */}
+                            <motion.div
+                                animate={{ rotate: -360 }}
+                                transition={{ duration: 50, ease: "linear", repeat: Infinity }}
+                                className="absolute inset-4 sm:inset-8 border border-white/5 rounded-full border-dashed"
+                            />
+
+                            {/* Inner solid ring */}
+                            <motion.div
+                                animate={{ rotate: 360 }}
+                                transition={{ duration: 40, ease: "linear", repeat: Infinity }}
+                                className="absolute inset-16 sm:inset-20 border border-primary/20 rounded-full"
+                            />
 
                             {/* Center Node */}
-                            <div className="w-24 h-24 rounded-full bg-slate-900 border border-primary/40 shadow-[0_0_30px_rgba(56,189,248,0.3)] flex flex-col items-center justify-center animate-[spin_40s_linear_reverse_infinite]">
-                                <span className="font-outfit font-bold text-white tracking-wide">CORE</span>
+                            <div className="relative z-20 w-28 h-28 rounded-full bg-slate-900 border border-primary/50 shadow-[0_0_40px_rgba(56,189,248,0.4)] flex flex-col items-center justify-center">
+                                <div className="absolute inset-0 bg-primary/20 rounded-full animate-pulse"></div>
+                                <Server className="w-8 h-8 text-white mb-2" />
+                                <span className="font-mono text-xs font-bold text-primary tracking-widest">SYSTEM</span>
                             </div>
 
                             {/* Orbiting Tech Nodes */}
-                            {[
-                                { label: "Laravel", color: "bg-red-500", deg: 0 },
-                                { label: "Next.js", color: "bg-white", deg: 72 },
-                                { label: "Postgres", color: "bg-blue-400", deg: 144 },
-                                { label: "React", color: "bg-sky-400", deg: 216 },
-                                { label: "Hetzner", color: "bg-red-600", deg: 288 }
-                            ].map((node, i) => (
-                                <div
-                                    key={i}
-                                    className="absolute w-16 h-16 rounded-full glass border-white/20 flex items-center justify-center shadow-lg"
-                                    style={{
-                                        top: `calc(50% - 32px + Math.sin(${node.deg * Math.PI / 180}) * 45%)`,
-                                        left: `calc(50% - 32px + Math.cos(${node.deg * Math.PI / 180}) * 45%)`,
-                                        transform: `rotate(${-node.deg}deg)`, // Compensate container spin in real implementation this needs more complex JS, simplifying for CSS trick
-                                    }}
-                                >
-                                    {/* Static fallback positioning due to React inline style limitations with complex circle math */}
-                                    <div className={`w-3 h-3 rounded-full ${node.color} mb-1 absolute top-2`}></div>
-                                    <span className="text-[10px] font-medium text-white/80 mt-3">{node.label}</span>
+                            <motion.div
+                                animate={{ rotate: 360 }}
+                                transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+                                className="absolute inset-0"
+                            >
+                                {/* Next.js Node */}
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
+                                    <motion.div
+                                        animate={{ rotate: -360 }}
+                                        transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+                                        className="w-20 h-20 rounded-2xl glass-card flex flex-col items-center justify-center shadow-lg border-white/20 relative group"
+                                    >
+                                        <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center mb-1 group-hover:scale-110 transition-transform">
+                                            <span className="w-2 h-2 rounded-full bg-white shadow-[0_0_10px_#ffffff]"></span>
+                                        </div>
+                                        <span className="text-xs font-medium text-white">Next.js</span>
+                                    </motion.div>
                                 </div>
-                            ))}
 
-                            {/* Fallback Static Positioning for orbiting nodes to bypass inline math complexity */}
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full glass-card flex flex-col items-center justify-center animate-[spin_40s_linear_reverse_infinite]">
-                                <div className="w-4 h-4 rounded-full bg-red-500/80 mb-1 shadow-[0_0_10px_#ef4444]"></div>
-                                <span className="text-xs font-medium text-white">Laravel</span>
-                            </div>
-                            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-20 h-20 rounded-full glass-card flex flex-col items-center justify-center animate-[spin_40s_linear_reverse_infinite]">
-                                <div className="w-4 h-4 rounded-full bg-blue-500/80 mb-1 shadow-[0_0_10px_#3b82f6]"></div>
-                                <span className="text-xs font-medium text-white">Postgres</span>
-                            </div>
-                            <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full glass-card flex flex-col items-center justify-center animate-[spin_40s_linear_reverse_infinite]">
-                                <div className="w-4 h-4 rounded-full bg-white/80 mb-1 shadow-[0_0_10px_#ffffff]"></div>
-                                <span className="text-xs font-medium text-white text-center leading-tight">Next.js</span>
-                            </div>
-                            <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full glass-card flex flex-col items-center justify-center animate-[spin_40s_linear_reverse_infinite]">
-                                <div className="w-4 h-4 rounded-full bg-sky-400/80 mb-1 shadow-[0_0_10px_#38bdf8]"></div>
-                                <span className="text-xs font-medium text-white text-center leading-tight">React 19</span>
-                            </div>
+                                {/* Postgres Node */}
+                                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-30">
+                                    <motion.div
+                                        animate={{ rotate: -360 }}
+                                        transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+                                        className="w-20 h-20 rounded-2xl glass-card flex flex-col items-center justify-center shadow-lg border-blue-500/20 relative group hover:border-blue-500/50 transition-colors"
+                                    >
+                                        <div className="w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center mb-1 group-hover:scale-110 transition-transform">
+                                            <span className="w-2 h-2 rounded-full bg-blue-400 shadow-[0_0_10px_#60a5fa]"></span>
+                                        </div>
+                                        <span className="text-xs font-medium text-white">Postgres</span>
+                                    </motion.div>
+                                </div>
+
+                                {/* Laravel Node */}
+                                <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
+                                    <motion.div
+                                        animate={{ rotate: -360 }}
+                                        transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+                                        className="w-20 h-20 rounded-2xl glass-card flex flex-col items-center justify-center shadow-lg border-red-500/20 relative group hover:border-red-500/50 transition-colors"
+                                    >
+                                        <div className="w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center mb-1 group-hover:scale-110 transition-transform">
+                                            <span className="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_10px_#ef4444]"></span>
+                                        </div>
+                                        <span className="text-xs font-medium text-white">Laravel</span>
+                                    </motion.div>
+                                </div>
+
+                                {/* React 19 Node */}
+                                <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 z-30">
+                                    <motion.div
+                                        animate={{ rotate: -360 }}
+                                        transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+                                        className="w-20 h-20 rounded-2xl glass-card flex flex-col items-center justify-center shadow-lg border-sky-400/20 relative group hover:border-sky-400/50 transition-colors"
+                                    >
+                                        <div className="w-6 h-6 rounded-full bg-sky-400/10 flex items-center justify-center mb-1 group-hover:scale-110 transition-transform">
+                                            <span className="w-2 h-2 rounded-full bg-sky-400 shadow-[0_0_10px_#38bdf8]"></span>
+                                        </div>
+                                        <span className="text-xs font-medium text-white">React 19</span>
+                                    </motion.div>
+                                </div>
+                            </motion.div>
+
+                            {/* Additional floating particles */}
+                            <motion.div
+                                animate={{ rotate: -180 }}
+                                transition={{ duration: 25, ease: "linear", repeat: Infinity }}
+                                className="absolute inset-10 z-10 pointer-events-none"
+                            >
+                                <div className="absolute top-0 right-1/4 w-2 h-2 bg-emerald-400 rounded-full shadow-[0_0_10px_#34d399]"></div>
+                                <div className="absolute bottom-1/4 left-0 w-1.5 h-1.5 bg-indigo-400 rounded-full shadow-[0_0_8px_#818cf8]"></div>
+                            </motion.div>
+
                         </div>
-
                     </motion.div>
                 </div>
             </div>

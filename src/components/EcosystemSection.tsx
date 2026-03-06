@@ -7,7 +7,7 @@ const projects = [
     {
         title: "LorryTech OS",
         type: "Fleet Management",
-        description: "Centralized dashboard untuk pemilik lori SME. Menguruskan revenue (Lalamove + side jobs), receipt vault, dan analitik P&L.",
+        description: "Centralized dashboard untuk pemilik lori SME. Menguruskan revenue (Lalamove + side jobs), digital receipt vault (LHDN 7-year compliance), komisyen, dan analitik P&L.",
         stack: ["Laravel 12", "Inertia.js", "React 18", "PostgreSQL"],
         icon: Truck,
         color: "text-blue-400",
@@ -23,9 +23,9 @@ const projects = [
         bg: "bg-pink-400/10",
     },
     {
-        title: "SwiftEdu",
+        title: "TerasEdu",
         type: "Digital Kindergarten",
-        description: "Solusi pengurusan tadika digital untuk automasi operasi harian guru dan pentadbir sistem secara pintar.",
+        description: "Solusi pengurusan tadika digital untuk automasi operasi harian guru dan pentadbir.",
         stack: ["Laravel", "React", "PostgreSQL"],
         icon: BookOpen,
         color: "text-amber-400",
@@ -35,7 +35,7 @@ const projects = [
         title: "BusinessSystem",
         type: "Contractor Management",
         description: "Sistem pengurusan kontraktor/pembinaan merangkumi Invoicing, PO, Inventory, dan Finance syarikat.",
-        stack: ["Laravel 12", "Inertia.js", "React 18"],
+        stack: ["Laravel 12", "Inertia.js", "React 18", "Supabase"],
         icon: Building2,
         color: "text-emerald-400",
         bg: "bg-emerald-400/10",
@@ -43,13 +43,13 @@ const projects = [
     {
         title: "Stock Monitor Bursa",
         type: "PWA Dashboard",
-        description: "Dashboard pemantauan saham Bursa Malaysia (Offline-first) dengan visualisasi data pasaran real-time.",
+        description: "Dashboard pemantauan saham Bursa Malaysia dengan sokongan PWA (Offline-first) dan visualisasi data real-time.",
         stack: ["React 19", "Vite 6", "TailwindCSS", "Chart.js"],
         icon: TrendingUp,
         color: "text-indigo-400",
         bg: "bg-indigo-400/10",
     }
-];
+];;
 
 export function EcosystemSection() {
     return (
@@ -109,7 +109,7 @@ export function EcosystemSection() {
                                         <h3 className="text-xl font-bold text-white font-outfit">{project.title}</h3>
                                     </div>
 
-                                    <p className="text-sm text-slate-400 font-light leading-relaxed mb-6 flex-grow">
+                                    <p className="text-sm text-slate-300 font-light leading-relaxed mb-6 flex-grow">
                                         {project.description}
                                     </p>
 

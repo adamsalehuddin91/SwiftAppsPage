@@ -73,7 +73,7 @@ export function ContactSection() {
                                         required
                                         value={formState.name}
                                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                                        className="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all"
+                                        className="w-full bg-black/20 border border-white/5 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-primary/50 focus:border-primary/50 transition-all shadow-inner"
                                         placeholder="Nama anda"
                                     />
                                 </div>
@@ -85,7 +85,7 @@ export function ContactSection() {
                                         required
                                         value={formState.email}
                                         onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                                        className="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all"
+                                        className="w-full bg-black/20 border border-white/5 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-primary/50 focus:border-primary/50 transition-all shadow-inner"
                                         placeholder="email@syarikat.com"
                                     />
                                 </div>
@@ -97,7 +97,7 @@ export function ContactSection() {
                                         rows={4}
                                         value={formState.message}
                                         onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                                        className="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all resize-none"
+                                        className="w-full bg-black/20 border border-white/5 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-primary/50 focus:border-primary/50 transition-all shadow-inner resize-none"
                                         placeholder="Terangkan secara ringkas keperluan sistem anda..."
                                     />
                                 </div>
@@ -105,7 +105,7 @@ export function ContactSection() {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="w-full group relative inline-flex items-center justify-center gap-2 px-8 py-4 font-semibold text-white bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/10 rounded-lg overflow-hidden transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="w-full group relative inline-flex items-center justify-center gap-2 px-8 py-4 font-semibold text-white bg-primary/10 border border-primary/20 hover:border-primary/60 hover:bg-primary/20 hover:shadow-[0_0_20px_rgba(56,189,248,0.15)] rounded-lg overflow-hidden transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     {isSubmitting ? (
                                         <span className="flex items-center gap-2">Menghantar <span className="animate-spin text-primary">⟳</span></span>
