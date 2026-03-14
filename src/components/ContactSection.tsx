@@ -8,15 +8,28 @@ export function ContactSection() {
     const [formState, setFormState] = useState({ name: "", email: "", message: "" });
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate form submission
-        setTimeout(() => {
+        try {
+            const res = await fetch("https://formspree.io/f/meerzdvo", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formState),
+            });
+            if (res.ok) {
+                setSubmitted(true);
+                setFormState({ name: "", email: "", message: "" });
+            } else {
+                alert("Failed to send. Please email admin@swiftapps.my directly.");
+            }
+        } catch {
+            alert("Network error. Please email admin@swiftapps.my directly.");
+        } finally {
             setIsSubmitting(false);
-            setFormState({ name: "", email: "", message: "" });
-            alert("Message sent. We will get back to you as soon as possible.");
-        }, 1500);
+        }
     };
 
     return (
@@ -64,6 +77,21 @@ export function ContactSection() {
                             {/* Form background glow */}
                             <div className="absolute -top-32 -right-32 w-64 h-64 bg-primary/20 blur-[100px] rounded-full pointer-events-none"></div>
 
+                            {submitted ? (
+                                <div className="relative z-10 flex flex-col items-center justify-center py-12 text-center">
+                                    <div className="w-16 h-16 rounded-full bg-emerald-400/10 flex items-center justify-center mb-4">
+                                        <Send className="w-7 h-7 text-emerald-400" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-2">Message Sent!</h3>
+                                    <p className="text-slate-400 text-sm mb-6">We&apos;ll get back to you as soon as possible.</p>
+                                    <button
+                                        onClick={() => setSubmitted(false)}
+                                        className="text-primary text-sm hover:underline"
+                                    >
+                                        Send another message
+                                    </button>
+                                </div>
+                            ) : (
                             <form onSubmit={handleSubmit} className="relative z-10 space-y-6">
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-medium text-slate-400 mb-2">Name</label>
@@ -117,6 +145,7 @@ export function ContactSection() {
                                     )}
                                 </button>
                             </form>
+                            )}
                         </div>
                     </motion.div>
 
