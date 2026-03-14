@@ -73,7 +73,7 @@ export function ContactSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        <div className="glass-card rounded-2xl p-8 relative overflow-hidden">
+                        <div className="glass-card rounded-2xl p-5 md:p-8 relative overflow-hidden">
                             {/* Form background glow */}
                             <div className="absolute -top-32 -right-32 w-64 h-64 bg-primary/20 blur-[100px] rounded-full pointer-events-none"></div>
 

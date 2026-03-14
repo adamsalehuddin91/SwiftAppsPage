@@ -22,7 +22,7 @@ export function AboutSection() {
                             {/* Decorative glow behind card */}
                             <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-indigo-500/30 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
 
-                            <div className="relative w-80 h-[400px] glass-card rounded-2xl p-6 flex flex-col justify-end overflow-hidden transform transition-all duration-500 hover:rotate-y-6 hover:-translate-y-2">
+                            <div className="relative w-full max-w-80 h-[400px] glass-card rounded-2xl p-6 flex flex-col justify-end overflow-hidden transform transition-all duration-500 hover:rotate-y-6 hover:-translate-y-2">
                                 {/* Photo */}
                                 <div className="absolute inset-0 z-0">
                                     <Image

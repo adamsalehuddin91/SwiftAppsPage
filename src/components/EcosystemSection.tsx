@@ -93,6 +93,7 @@ const projects = [
 
 function ScreenshotModal({ project, onClose }: { project: typeof projects[0]; onClose: () => void }) {
     const [current, setCurrent] = useState(0);
+    const [imgError, setImgError] = useState(false);
     const shots = project.screenshots;
 
     return (
@@ -133,13 +134,21 @@ function ScreenshotModal({ project, onClose }: { project: typeof projects[0]; on
 
                 {/* Screenshot display */}
                 <div className="relative rounded-2xl overflow-hidden bg-slate-900 border border-white/10 aspect-video">
+                    {imgError ? (
+                        <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-500">
+                            <Images className="w-12 h-12 mb-2 opacity-30" />
+                            <p className="text-sm">Screenshot coming soon</p>
+                        </div>
+                    ) : (
                     <Image
                         src={shots[current].src}
                         alt={shots[current].caption}
                         fill
                         className="object-contain"
                         sizes="(max-width: 768px) 100vw, 900px"
+                        onError={() => setImgError(true)}
                     />
+                    )}
 
                     {/* Navigation arrows */}
                     {shots.length > 1 && (
