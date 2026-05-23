@@ -16,8 +16,8 @@ const pillars = [
         icon: Shield,
         iconBg: 'bg-emerald-500/15',
         iconColor: 'text-emerald-400',
-        en: { title: 'Secure Hosting', body: 'Hetzner EU datacenter, 99.9% uptime, daily backup and free SSL certificate.' },
-        bm: { title: 'Hosting Selamat', body: 'Hetzner EU datacenter, 99.9% uptime, backup harian dan SSL percuma.' },
+        en: { title: 'Secure Hosting', body: '99.9% uptime, daily backup, free SSL — your data is safe and always accessible.' },
+        bm: { title: 'Hosting Selamat', body: '99.9% uptime, backup harian, SSL percuma — data anda selamat dan sentiasa boleh diakses.' },
     },
     {
         icon: Globe,
