@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Layers } from "lucide-react";
+import Image from "next/image";
 import { useLang } from "@/context/LangContext";
 
 const products = [
@@ -22,12 +22,13 @@ export default function FooterSection() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
                     {/* Brand */}
                     <div className="col-span-2 md:col-span-1">
-                        <div className="flex items-center gap-2 mb-3">
-                            <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
-                                <Layers size={16} className="text-primary" />
-                            </div>
+                        <div className="flex items-center gap-2 mb-2">
+                            <Image src="/logo.png" alt="SwiftApps" width={32} height={32} className="rounded-full" />
                             <span className="font-outfit font-bold text-white">Swift<span className="text-primary">Apps</span></span>
                         </div>
+                        <p className="text-[10px] font-semibold tracking-widest text-slate-500 uppercase mb-3">
+                            Membina Masa Depan Digital
+                        </p>
                         <p className="text-slate-400 text-sm leading-relaxed">
                             {lang === 'en'
                                 ? 'Digital systems for Malaysian SMEs.'

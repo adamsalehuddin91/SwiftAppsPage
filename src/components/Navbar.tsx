@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { Layers, X, Menu } from "lucide-react";
+import Image from "next/image";
+import { X, Menu } from "lucide-react";
 import { useLang } from "@/context/LangContext";
 
 export function Navbar() {
@@ -30,9 +31,13 @@ export function Navbar() {
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 group">
-                        <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:border-primary/50 group-hover:bg-primary/20 transition-all duration-300">
-                            <Layers className="text-primary w-4.5 h-4.5" size={18} />
-                        </div>
+                        <Image
+                            src="/logo.png"
+                            alt="SwiftApps"
+                            width={36}
+                            height={36}
+                            className="rounded-full group-hover:scale-105 transition-transform duration-300"
+                        />
                         <span className="font-outfit font-bold text-xl tracking-wide text-white">
                             Swift<span className="text-primary">Apps</span>
                         </span>

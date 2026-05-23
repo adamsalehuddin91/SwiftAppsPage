@@ -7,13 +7,13 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
-    title: "SwiftApps | Digital Systems for Malaysian Business",
+    title: "SwiftApps | Membina Masa Depan Digital",
     description: "Custom digital systems for Malaysian SMEs — childcare, car rental, school, salon, accounting and more. Built fast, supported direct.",
     keywords: ["sistem digital malaysia", "software SME malaysia", "SwiftTaska", "SwiftFleet", "SwiftSchool", "taska system", "kereta sewa system", "SwiftApps"],
     authors: [{ name: "SwiftApps", url: "https://swiftapps.my" }],
     metadataBase: new URL("https://swiftapps.my"),
     openGraph: {
-        title: "SwiftApps | Digital Systems for Malaysian Business",
+        title: "SwiftApps | Membina Masa Depan Digital",
         description: "Custom digital systems for Malaysian SMEs. From childcare to car rentals — we build it, we support it.",
         url: "https://swiftapps.my",
         siteName: "SwiftApps",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "SwiftApps | Digital Systems for Malaysian Business",
+        title: "SwiftApps | Membina Masa Depan Digital",
         description: "Custom digital systems for Malaysian SMEs. From childcare to car rentals — we build it, we support it.",
     },
     robots: { index: true, follow: true },
