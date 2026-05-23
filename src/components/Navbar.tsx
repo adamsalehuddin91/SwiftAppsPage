@@ -12,6 +12,7 @@ export function Navbar() {
 
     const navLinks = [
         { href: "#products", en: "Products", bm: "Produk" },
+        { href: "#spotlight", en: "Features", bm: "Ciri-ciri" },
         { href: "#pricing", en: "Pricing", bm: "Harga" },
         { href: "#why-us", en: "Why Us", bm: "Kenapa Kami" },
         { href: "#how-it-works", en: "How It Works", bm: "Cara Kerja" },

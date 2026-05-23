@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { StatsBar } from "@/components/StatsBar";
 import { EcosystemSection } from "@/components/EcosystemSection";
+import { ProductSpotlight } from "@/components/ProductSpotlight";
 import { WhySwiftApps } from "@/components/WhySwiftApps";
 import { PricingSection } from "@/components/PricingSection";
 import { HowItWorks } from "@/components/HowItWorks";
@@ -16,6 +17,7 @@ export default function Home() {
             <HeroSection />
             <StatsBar />
             <EcosystemSection />
+            <ProductSpotlight />
             <WhySwiftApps />
             <PricingSection />
             <HowItWorks />
