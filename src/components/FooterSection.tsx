@@ -103,6 +103,9 @@ export default function FooterSection() {
                         {lang === 'en' ? 'Built with ♥ in Malaysia.' : 'Dibina dengan ♥ di Malaysia.'}
                     </span>
                     <div className="flex items-center gap-4">
+                        <Link href="/privacy-policy" className="hover:text-primary transition-colors">
+                            {lang === 'en' ? 'Privacy Policy' : 'Dasar Privasi'}
+                        </Link>
                         <a href="#" className="hover:text-slate-300 transition-colors">Facebook</a>
                         <a href="#" className="hover:text-slate-300 transition-colors">Instagram</a>
                         <a href="#" className="hover:text-slate-300 transition-colors">LinkedIn</a>
