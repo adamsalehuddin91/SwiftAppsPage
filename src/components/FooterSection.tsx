@@ -106,6 +106,12 @@ export default function FooterSection() {
                         <Link href="/privacy-policy" className="hover:text-primary transition-colors">
                             {lang === 'en' ? 'Privacy Policy' : 'Dasar Privasi'}
                         </Link>
+                        <Link href="/terms" className="hover:text-primary transition-colors">
+                            {lang === 'en' ? 'Terms' : 'Terma'}
+                        </Link>
+                        <Link href="/data-deletion" className="hover:text-primary transition-colors">
+                            {lang === 'en' ? 'Data Deletion' : 'Padam Data'}
+                        </Link>
                         <a href="#" className="hover:text-slate-300 transition-colors">Facebook</a>
                         <a href="#" className="hover:text-slate-300 transition-colors">Instagram</a>
                         <a href="#" className="hover:text-slate-300 transition-colors">LinkedIn</a>
