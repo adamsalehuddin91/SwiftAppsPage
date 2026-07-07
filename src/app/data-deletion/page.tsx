@@ -5,7 +5,7 @@ import { Trash2, ArrowLeft, Mail } from "lucide-react";
 import FooterSection from "@/components/FooterSection";
 
 const LAST_UPDATED = "July 2026";
-const CONTACT_EMAIL = "4damsalehuddin@gmail.com";
+const CONTACT_EMAIL = "admin@swiftapps.my";
 
 export const metadata: Metadata = {
     title: "Data Deletion Instructions | Tokwi Threads Ops",
